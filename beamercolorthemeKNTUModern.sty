@@ -1,0 +1,102 @@
+% Theme for KNTU - K.N toosi University of Technology
+%
+% Implemented by: 
+% Emad Pourhassani
+
+\RequirePackage[LGR, T1]{fontenc}
+\mode<presentation>
+
+%%%%%% Define Colors
+
+%% Primary
+\definecolor{kntublue}{RGB}{0, 0, 138}
+
+%% Secondary
+\definecolor{kntured}{RGB}{224, 45, 0}
+\definecolor{kntuteal}{RGB}{0, 102, 102}
+
+%% Tertiary
+\definecolor{kntulightblue}{RGB}{224, 224, 255}
+\definecolor{kntudarkred}{RGB}{153, 0, 43}
+\definecolor{kntudarkblue}{RGB}{0, 0, 100}
+\definecolor{kntuorange}{RGB}{255, 129, 0}
+
+%% Basic black/white/gray
+\definecolor{kntugray}{cmyk}{0, 0, 0, 0.2}
+\definecolor{kntublack}{rgb}{0, 0, 0}
+\definecolor{kntuwhite}{rgb}{1, 1, 1}
+
+\colorlet{alert}{kntured}
+\colorlet{beameralert}{alert}
+%%%%%% Set up Colors
+
+\setbeamercolor*{normal text}{fg = kntublack, bg = kntuwhite}
+\setbeamercolor*{alerted text}{fg=kntured}
+\setbeamercolor*{example text}{fg=kntublue}
+
+% We want \structure to give blue text,
+% but local structure elements to be yellow
+\setbeamercolor*{structure}{fg = kntuteal}
+\setbeamercolor*{local structure}{fg = kntublue}
+
+% Many elements are white text on blue background
+\setbeamercolor{white on blue}{fg = kntuwhite, bg = kntublue}
+
+\setbeamercolor*{palette primary}{use=structure, fg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!75!kntured}
+\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!50!kntured}
+\setbeamercolor*{palette quaternary}{fg=kntured}
+
+\setbeamercolor*{palette sidebar secondary}{fg = kntudarkblue}
+\setbeamercolor*{palette sidebar quarternary}{fg = kntudarkblue}
+
+% All text elements should be in black,
+% even though structure color is blue
+\setbeamercolor{textlike}{parent = normal text}
+\setbeamercolor*{titlelike}{parent = textlike}
+
+\setbeamercolor*{title in head/foot}{parent=title}
+\setbeamercolor*{title in sidebar}{parent=title}
+
+\setbeamercolor*{author}{parent=textlike}
+\setbeamercolor*{author in head/foot}{parent=author}
+
+\setbeamercolor*{institute}{parent=textlike}
+\setbeamercolor*{institute in head/foot}{parent=institute}
+
+\setbeamercolor*{date}{parent=textlike}
+\setbeamercolor*{date in head/foot}{parent=date}
+
+\setbeamercolor*{section in toc}{parent=textlike}
+\setbeamercolor*{section in head/foot}{parent=section}
+
+\setbeamercolor*{headline}{parent = white on blue}
+\setbeamercolor*{footline}{parent = white on blue}
+
+\setbeamercolor*{block body}{bg = kntugray}
+\setbeamercolor*{block body alerted}{parent = block body}
+\setbeamercolor*{block body example}{parent = block body}
+\setbeamercolor*{block title}{parent=white on blue}
+\setbeamercolor*{block title alerted}{use = alerted text, bg=alerted text.fg, fg = kntuwhite}
+\setbeamercolor*{block title example}{use = example text, bg = example text.fg, fg = kntuwhite}
+
+\setbeamercolor*{item projected}{parent = white on blue}
+
+% Local structure is blue, but blue-on-white doesn't work
+\setbeamercolor*{description item}{parent=structure}
+
+\setbeamercolor*{bibliography item}{fg=kntublack}
+
+\setbeamercolor*{bibliography entry author}{parent = textlike}
+\setbeamercolor*{bibliography entry title}{parent = textlike}
+\setbeamercolor*{bibliography entry location}{parent = textlike}
+\setbeamercolor*{bibliography entry note}{parent = textlike}
+
+\setbeamercolor*{abstract title}{parent=titlelike}
+
+\setbeamercolor*{qed symbol}{parent = local structure}
+
+%% Title page and section page should be black on yellow
+\setbeamercolor*{title page}{parent = white on blue}
+\setbeamercolor*{section page}{parent = white on blue}
+\mode<all>

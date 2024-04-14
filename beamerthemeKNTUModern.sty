@@ -1,0 +1,82 @@
+% Theme for KNTU - K.N toosi University of Technology
+%
+% Implemented by: 
+% Emad Pourhassani
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[LGR, T1]{fontenc}
+\hypersetup{colorlinks,
+	urlcolor = omblue,
+	linkcolor =,
+	citecolor =}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Standard headers:
+\DeclareOptionBeamer{UKenglish}
+{
+    \def \KNTUlangII {english}\def \OMlang {eng}
+    \def \KNTUlangII {UKenglish}
+}
+\DeclareOptionBeamer{USenglish}
+{
+    \def \KNTUlang {eng}
+    \def \KNTUlangII {USenglish}
+}
+\DeclareOptionBeamer{american}
+{
+    \def \KNTUlang {eng}
+    \def \KNTUlangII {american}
+}
+\DeclareOptionBeamer{english}
+{
+    \def \KNTUlang {eng}
+    \def \KNTUlangII {english}
+}
+\urlstyle{same}
+
+%% Vertical text alignment:
+\DeclareOptionBeamer{c}{ \beamer@centeredtrue  }
+\DeclareOptionBeamer{t}{ \beamer@centeredfalse }
+
+
+%% Theorem numbers, gets sent along to inner theme:
+\DeclareOptionBeamer{unnumbered}{\PassOptionsToPackage{unnumbered}{beamerinnerthemeKNTUModern}}
+\DeclareOptionBeamer{numbered}  {\PassOptionsToPackage{numbered}{beamerinnerthemeKNTUModern}}
+\DeclareOptionBeamer{AMS}       {\PassOptionsToPackage{AMS}{beamerinnerthemeKNTUModern}}
+
+%% Font, gets sent along to fonttheme:
+\DeclareOptionBeamer{SansSerif}{\PassOptionsToPackage{SansSerif}{beamerfontthemeKNTUModern}}
+\DeclareOptionBeamer{MathSerif}{\PassOptionsToPackage{MathSerif}{beamerfontthemeKNTUModern}}
+\DeclareOptionBeamer{Serif}{\PassOptionsToPackage{Serif}{beamerfontthemeKNTUModern}}
+
+%% Automatic title frame:
+\DeclareOptionBeamer{TitlePage}{\PassOptionsToPackage{TitlePage}{beamerinnerthemeKNTUModern}}
+\DeclareOptionBeamer{NoTitlePage}{\PassOptionsToPackage{NoTitlePage}{beamerinnerthemeKNTUModern}}
+
+\ExecuteOptionsBeamer{english}
+\ExecuteOptionsBeamer{t}
+\ExecuteOptionsBeamer{unnumbered}
+\ExecuteOptionsBeamer{SansSerif}
+\ExecuteOptionsBeamer{TitlePage}
+\ProcessOptionsBeamer
+
+
+\RequirePackage[\KNTUlangII]{babel}
+
+%% Allow more stretching
+\setlength{\emergencystretch}{3em}
+
+\mode<presentation>
+
+\usefonttheme{KNTUModern}
+\usecolortheme{KNTUModern}
+\useoutertheme{KNTUModern}
+\useinnertheme[\KNTUlang]{KNTUModern}
+
+
+\mode<all>
+
+\endinput
