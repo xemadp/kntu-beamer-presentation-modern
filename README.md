@@ -1,6 +1,8 @@
 # KNTU Beamer Presentation Modern Theme
 Beamer Presentation Modern Theme for KNTU
 
+![screenshot](screenshot.png)
+
 In this project I try to create a "modern" looking theme for K.N. Toosi University of Technology.
 with great inspiration from [Oslo Met](https://github.com/martinhelso/OsloMet).
 
